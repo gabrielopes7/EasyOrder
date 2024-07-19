@@ -1,0 +1,130 @@
+@charset 'UTF-8';
+
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto'), url('../assets/fonts/Roboto-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--cor-primaria: #007BFF;
+	--cor-secundaria: #F2F2F2;
+	--cor-primaria-escura: #0056b3;
+	--espa�amento: 10px;
+}
+
+body {
+	display: flex; /* usa flexbox para alinhar itens */
+	font-family: 'Roboto', Times, serif;
+	justify-content: center; /* centraliza horizontalmente */
+	align-items: center; /* centraliza verticalmente */
+	align-content: center;
+	margin: 0; /* remove margens padr�o */
+	height: 100%;
+	background-color: #F2F2F2;
+}
+
+.title {
+	font-size: 64px;
+	font-weight: 700;
+	color: var(--cor-primaria); /* Azul */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title span {
+	color: black;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	text-align: center;
+	margin: 0 auto; /* margens autom�ticas para centraliza��o horizontal */
+	padding: 20px; /* espa�amento interno */
+	border: 1px solid #ccc; /* borda para visualiza��o */
+}
+
+.container a {
+	color: var(--cor-primaria);
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+.container a:hover {
+	color: var(--cor-primaria-escura); /* Azul escuro */
+}
+
+/* Estilos para o input de login */
+.inputLoginRegister {
+	width: 300px; /* largura desejada */
+	padding: 10px; /* espa�amento interno */
+	margin: 10px 0; /* margem superior e inferior */
+	font-size: 16px; /* tamanho da fonte */
+	border: 1px solid #ccc; /* borda cinza */
+	border-radius: 5px; /* borda arredondada */
+}
+
+/* Estilos para o placeholder do input */
+.inputLoginRegister::placeholder {
+	color: #999; /* cor do texto do placeholder */
+}
+
+/* Estilos para quando o input est� focado */
+.inputLoginRegister:focus {
+	outline: none; /* remove o contorno padr�o */
+	border-color: #66afe9; /* borda azul quando focado */
+	box-shadow: 0 0 5px #66afe9; /* sombra quando focado */
+}
+
+.loginContainer{
+	margin: 20px 0;
+}
+
+
+/* Estilos para o label do input */
+.labelLoginRegister {
+	margin: 0 10px 0 0;
+	margin-bottom: 5px; /* margem inferior para separa��o do pr�ximo elemento */
+	font-size: 16px; /* tamanho da fonte */
+	font-weight: bold; /* negrito na fonte */
+	color: #333; /* cor do texto */
+}
+
+
+
+.footer {
+	margin-top: 20px;
+}
+
+#buttonRegister {
+	background-color: var(--cor-primaria); /* Azul */
+	border: none;
+	color: white;
+	padding: 12px 24px;
+	margin-top: 7px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#buttonRegister:hover {
+	background-color: var(--cor-primaria-escura); /* Azul escuro */
+	transform: translateY(-2px);
+}
+
+#buttonRegister:active {
+	background-color: #004085; /* Azul mais escuro */
+	transform: translateY(0);
+}
+
+.extraLinks{
+	margin: 10px 0;
+}
