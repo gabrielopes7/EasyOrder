@@ -16,17 +16,21 @@ const RegisterContainer = () => {
     const registerUser = async (event) => {
         event.preventDefault();
 
-        const formData = new FormData();
-        formData.append('nome', name);
-        formData.append('email', email);
-        formData.append('dataNascimento', birthdayDate);
-        formData.append('senha', password);
+        // Está salvando agora, preciso achar um jeito mais bonito de criar esse JsonData;
+
+        const jsonData = {
+            'nome': name,
+            'email': email,
+            'dataNascimento': birthdayDate,
+            'senha': password
+        }
+
 
         try {
             const response = await fetch('http://192.168.15.95:45455/api/registrarUsuario', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                body: formData,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(jsonData),
             });
             const data = await response;
             console.log(data);
