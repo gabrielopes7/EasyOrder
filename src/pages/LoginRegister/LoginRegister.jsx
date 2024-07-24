@@ -1,9 +1,9 @@
 import React from 'react'
-import LoginPresentation from './components/LoginRegisterPresentation';
+import LoginContainer from './components/LoginRegisterContainer';
 
 
 export default function LoginRegister(){
     return <>
-        <LoginPresentation/>
+        <LoginContainer/>
     </>
 }

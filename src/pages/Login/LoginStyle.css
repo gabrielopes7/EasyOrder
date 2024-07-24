@@ -58,6 +58,13 @@ body {
 	color: var(--cor-primaria-escura); /* Azul escuro */
 }
 
+#inputContainer {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	text-align: start;
+}
+
 /* Estilos para o input de login */
 .inputLogin {
 	width: 300px; /* largura desejada */
@@ -81,12 +88,13 @@ body {
 }
 
 .loginContainer{
-	margin: 20px 0;
+	margin: 0;
 }
 
 
 /* Estilos para o label do input */
 .labelLogin {
+	display: block;
 	margin: 0 10px 0 0;
 	margin-bottom: 5px; /* margem inferior para separa��o do pr�ximo elemento */
 	font-size: 16px; /* tamanho da fonte */
