@@ -8,21 +8,19 @@ const RegisterContainer = () => {
     const [birthdayDate, setBirthdayDate] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-    const [users, setUsers] = useState();
     const [isFormValid, setIsFormValid] = useState(false);
     
 
     const registerUser = async (event) => {
         event.preventDefault();
 
-        // Está salvando agora, preciso achar um jeito mais bonito de criar esse JsonData;
+        // TODO: Está salvando agora, preciso achar um jeito mais bonito de criar esse JsonData;
 
         const jsonData = {
             'nome': name,
             'email': email,
             'dataNascimento': birthdayDate,
-            'senha': password
+            'senhaHash': password
         }
 
 
@@ -34,7 +32,6 @@ const RegisterContainer = () => {
             });
             const data = await response;
             console.log(data);
-            //setUsers([...users, data]);
         } catch (error) {
             console.error(error);
         }
@@ -42,7 +39,6 @@ const RegisterContainer = () => {
 
     const changeName = (event) => {
         setName(event.target.value);
-        console.log(name);
         if (name.trim().length < 3)
             setIsFormValid(false);
     }
@@ -91,7 +87,7 @@ const RegisterContainer = () => {
     return (
         <LoginRegisterPresentation
             onRegister={registerUser}
-            onChangeNome={changeName}
+            onChangeName={changeName}
             onChangeBirthdayDate={changeBirthdayDate}
             onChangeEmail={changeEmail}
             onChangePassword={changePassword}
